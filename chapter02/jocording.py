@@ -172,6 +172,81 @@ print(1 in a) #a가 1에 있냐
 s1 = set([1,2,3])
 print(type(s1))
 s1 = {1,2,3}
-print = (type(s1))
+print(type(s1))
 
 #1시간 13분
+
+s1 = set("hello")
+print(s1)
+# 집합은 순서가 없고 각 문자로 중복없이 가져감
+
+
+#교집합
+s1 = set([1, 2, 3, 4, 5, 6])
+s2 = set([4, 5, 6, 7, 8, 9])
+print(s1 & s2)
+print(s1.intersection(s2))  #  교집합을 새롭게
+
+print(s1|s2)  # 합집합 기호
+print(s1.union(s2))
+
+print(s1 - s2) # 차집합
+print(s1.difference(s1))
+
+#집합 원소 추가하기
+s1 = set([1,2,3,4,5,6])
+s1.add(7)
+print(s1)
+
+s1.update([7,8,9]) # 한번에 많은거 추가가능
+
+s1.remove(1)  # 집합에서 1이라는 원소 지우기
+
+
+# 불(리언)은 참 또는 거짓
+
+a = True  # T를 대문자로 써줘야한다.
+print(type(a))  # 타입은 불형
+
+# 있는거 진실 없는거(값) 거짓
+
+a =  "안녕"
+if a:
+    print(a)   # 안녕이 있어서 진실로 받고 출력함
+
+
+a = [1,2,3,4]
+while a:
+    a.pop()
+    print(a)
+    b = "이거 봐라"
+    if a:
+        print(b)
+
+
+# 자료형 객체 
+a = [1,2,3]
+b = a   # b는 a의 주소를 받은개념
+a[1] = 4   # b도 1번에 4로 변함
+print(a)
+print(b)
+
+#그냥 값만 복사하고싶으면
+a = [1,2,3]
+b =  a[:]
+a[1] = 4
+print(id(a))
+print(id(b))  # 리스트에 값을 준것이기 때문에 주소도 다르고 값도 다르게 나온다 슬라이싱
+print(a)
+print(b)
+
+
+a = 3
+b = 5
+a,b = b,a  # 값을 바꾸는 공식
+print(a)
+print(b)
+
+
+#파이썬 구조를 직관적으로 보여주는 사이트 "pythontutor.com/live.html"
+#1시간 41분 피곤하다..
