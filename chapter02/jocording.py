@@ -1,5 +1,8 @@
 # int 정수 float 실수형
 # 나누기 /  몫 // 나머지 %
+from re import I
+
+
 a = 3
 b = 4
 print(a/b)
@@ -250,3 +253,51 @@ print(b)
 
 #파이썬 구조를 직관적으로 보여주는 사이트 "pythontutor.com/live.html"
 #1시간 41분 피곤하다..
+
+
+#if 문
+
+#여기 그때 해봤던거 쓰기
+
+
+# for 문
+#for 변수 in 리스트(또는 튜플 , 문자열):
+    #수행할 문장1
+
+marks = [90, 25, 67, 45, 80]
+number = 0
+for mark in marks:  # 파이썬에 for문은 리스트를 순서대로 빼온다.
+    number = number + 1
+    if mark >= 60:
+        print("%d번 학생은 합격입니다." % number)
+    else:
+        print("%d번 학생은 불합격입니다." % number)
+
+# for continue문 continue는 if문을 조건으로 부합하면 위로 올라가는 성질
+
+marks = [90, 25, 67, 45, 80]
+number = 0
+for mark in marks:
+    number = number + 1
+    if mark < 60: continue
+    print("%d번 학생 축하합니다. 합격입니다." % number)
+
+# range(x, y) 란 x<= ㅇ < y   // in 은 하나씩 빼서 넣는다.
+
+sum = 0
+for i in range(1,11):
+    sum = sum + i
+print(sum)
+
+#구구단 이중 for문
+for i in range(2,10):
+    for j in range(1, 10):  # 안쪽 for문임으로 바깥쪽 2를 부여받고 안쪽 for문 다 돌리고 바깥쪽으로 나감 i는 계속 2임
+        print(i*j, end=" ")
+    print('')
+
+# 리스트 내포
+# result = [num * 3 for num in a if num % 2 == 0]
+
+# 2시간 30분까지 완료
+
+
